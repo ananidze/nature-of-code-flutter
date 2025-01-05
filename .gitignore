@@ -115,4 +115,3 @@ app.*.map.json
 .github
 /windows
 /macos
-/test
