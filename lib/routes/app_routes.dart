@@ -9,28 +9,31 @@ class AppRouter {
   GoRouter get router => _goRouter;
 
   late final GoRouter _goRouter = GoRouter(
-    initialLocation: AppPage.home.toPath,
+    initialLocation: AppPage.home.name,
     routes: <GoRoute>[
       GoRoute(
-        path: AppPage.home.toPath,
-        name: AppPage.home.toName,
+        path: AppPage.home.path,
+        name: AppPage.home.name,
         builder: (context, state) => const HomePage(),
       ),
       GoRoute(
-        path: AppPage.chapterList.toPath,
+        path: AppPage.chapterList.path,
+        name: AppPage.chapterList.name,
         builder: (context, state) => const Placeholder(),
       ),
       GoRoute(
-        path: AppPage.chapter1Motion.toPath,
+        path: AppPage.chapter1Motion.path,
+        name: AppPage.chapter1Motion.name,
         builder: (context, state) => const BouncingBallPage(),
       ),
       GoRoute(
-        path: AppPage.chapter2Forces.toPath,
+        path: AppPage.chapter2Forces.path,
+        name: AppPage.chapter2Forces.name,
         builder: (context, state) => const Placeholder(),
       ),
       GoRoute(
-        path: AppPage.error.toPath,
-        name: AppPage.error.toName,
+        path: AppPage.error.path,
+        name: AppPage.error.name,
         builder: (context, state) => ErrorPage(error: state.extra.toString()),
       ),
     ],

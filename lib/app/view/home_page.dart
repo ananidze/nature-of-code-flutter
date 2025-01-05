@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () => context.push(AppPage.chapter1Motion.toPath),
+              onPressed: () => context.push(AppPage.chapter1Motion.path),
               child: const Text('Chapter 1: Motion'),
             ),
           ],

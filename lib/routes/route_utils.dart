@@ -1,31 +1,37 @@
-enum AppPage { home, chapterList, chapter1Motion, chapter2Forces, error }
+enum AppPage {
+  home(
+    path: '/home',
+    name: 'HOME',
+    title: 'Welcome to Nature of Code',
+  ),
+  chapterList(
+    name: 'CHAPTER_LIST',
+    path: '/chapters',
+    title: 'Chapters',
+  ),
+  chapter1Motion(
+    name: 'CHAPTER_1_MOTION',
+    path: '/chapters/chapter1/motion',
+    title: 'Chapter 1: Motion',
+  ),
+  chapter2Forces(
+    name: 'CHAPTER_2_FORCES',
+    path: '/chapters/chapter2/forces',
+    title: 'Chapter 2: Forces',
+  ),
+  error(
+    name: 'ERROR',
+    path: '/error',
+    title: 'Oops! Something went wrong',
+  );
 
-extension AppPageExtension on AppPage {
-  static const _paths = {
-    AppPage.home: '/home',
-    AppPage.chapterList: '/chapters',
-    AppPage.chapter1Motion: '/chapters/chapter1/motion',
-    AppPage.chapter2Forces: '/chapters/chapter2/forces',
-    AppPage.error: '/error',
-  };
+  const AppPage({
+    required this.path,
+    required this.name,
+    required this.title,
+  });
 
-  static const _names = {
-    AppPage.home: 'HOME',
-    AppPage.chapterList: 'CHAPTER_LIST',
-    AppPage.chapter1Motion: 'CHAPTER_1_MOTION',
-    AppPage.chapter2Forces: 'CHAPTER_2_FORCES',
-    AppPage.error: 'ERROR',
-  };
-
-  static const _titles = {
-    AppPage.home: 'Welcome to Nature of Code',
-    AppPage.chapterList: 'Chapters',
-    AppPage.chapter1Motion: 'Chapter 1: Motion',
-    AppPage.chapter2Forces: 'Chapter 2: Forces',
-    AppPage.error: 'Error',
-  };
-
-  String get toPath => _paths[this]!;
-  String get toName => _names[this]!;
-  String get toTitle => _titles[this]!;
+  final String path;
+  final String name;
+  final String title;
 }
