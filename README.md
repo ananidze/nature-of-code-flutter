@@ -1,16 +1,34 @@
-# nature_of_code
+Nature of Code - Flutter
 
-A new Flutter project.
+A Flutter-based project inspired by The Nature of Code by Daniel Shiffman. This project explores creative coding concepts and animations implemented using Flutter's rendering and animation capabilities.
 
-## Getting Started
+Simulations
 
-This project is a starting point for a Flutter application.
+Chapter 1: Motion
 
-A few resources to get you started if this is your first Flutter project:
+Bouncing Ball: A ball moves across the screen and bounces off the edges.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Getting Started
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Prerequisites
+
+Flutter SDK
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/ananidze/nature-of-code-flutter.git
+
+Navigate to the project folder:
+
+cd nature-of-code-flutter
+
+Get the dependencies:
+
+flutter pub get
+
+Run the project:
+
+flutter run
+
